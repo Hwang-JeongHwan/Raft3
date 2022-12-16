@@ -1,15 +1,5 @@
 response time is 27 try = 1 leader alive 
 response time is 19 try = 1 leader alive 
-response time is 15 try = 1 leader alive 
-response time is 22 try = 1 leader alive 
-response time is 22 try = 1 leader alive 
-response time is 17 try = 1 leader alive 
-response time is 17 try = 1 leader alive 
-response time is 1047 try = 1 leader dead 
-response time is 15 try = 1 leader alive 
-response time is 16 try = 1 leader alive 
-response time is 13 try = 1 leader alive 
-response time is 30 try = 1 leader alive 
 response time is 19 try = 1 leader alive 
 response time is 19 try = 1 leader alive 
 response time is 25 try = 1 leader alive 
