@@ -1,3 +1,11 @@
+response time is 27 try = 1 leader alive 
+response time is 19 try = 1 leader alive 
+response time is 19 try = 1 leader alive 
+response time is 19 try = 1 leader alive 
+response time is 25 try = 1 leader alive 
+response time is 29 try = 1 leader alive 
+response time is 19 try = 1 leader alive 
+response time is 1603 try = 2 leader dead 
 response time is 615 try = 2 abnormal 
 response time is 21 try = 1 leader alive 
 response time is 25 try = 1 leader alive 
