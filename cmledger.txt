@@ -2,5 +2,3 @@ start
 {"id":"app","key":"x","value":2,"logindex":1}
 {"id":"app","key":"x","value":3,"logindex":2}
 {"id":"app","key":"x","value":4,"logindex":3}
-{"id":"app","key":"x","value":5,"logindex":4}
-{"id":"app","key":"x","value":6,"logindex":5}
