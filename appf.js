@@ -86,7 +86,6 @@ client.on('message',(msg,rinfo)=>{
                     console.log('time over');
                 }
                 var retry_merge = mergeJSON.merge(app,retry);
-
                 var y = JSON.stringify(retry_merge);//JSON을 string형식으로 변환
 */              app.try +=1;
                 var j = JSON.stringify(app)
@@ -143,41 +142,46 @@ client.on('message',(msg,rinfo)=>{
     
     if (i.commit == 'commit'){
         var end = Date.now()-i.start;
-        var endtime = `end time is ${end} try = ${i.try+1} \n`;
+        var endtime = `response time is ${end} try = ${i.try+1} leader alive \n`;
         var endtime2 = `${end}\n`;
         
-        if(i.value % 10 == 0 ){
-            var endtime=`end time is ${end} try = ${i.try} leader dead \n`;
-
-        }
+     
         console.log('time:',end);
         if (end<1000){
             total+=end;
             count +=1;
         
     }
+        
         total_time = total/count;
-        if(before_port!=i.port){
+        if(i.value <= 1001 && end<100000){
+            if(before_port != i.port){
+                var endtime = `response time is ${end} try = ${i.try+1} abnormal \n`;
+            }
+            if(i.value % 10 == 0 ){
+                var endtime=`response time is ${end} try = ${i.try} leader dead \n`;
+    
+            }
             total2+=end;
             count2+=1;
             total_time2 = total2/count2;
             console.log('total2:',total_time2);
-            if (count2 == 100){
-                var total3 = `transaction is 100 total time is ${total_time2}`;
-                fs.appendFile('./change2.txt',total3)
-                .then(()=>{
-                return fs.readFile('./change2.txt')
+            // if (count2 == 100){
+            //     var total3 = `transaction is 100 total time is ${total_time2}`;
+            //     fs.appendFile('./change2.txt',total3)
+            //     .then(()=>{
+            //     return fs.readFile('./change2.txt')
             
-                })
-                .then((data)=>{
-             //   console.log('change:',data.toString());
+            //     })
+            //     .then((data)=>{
+            //  //   console.log('change:',data.toString());
       
-             })
-                .catch((error)=>{
-                console.error(error);
-                });
+            //  })
+            //     .catch((error)=>{
+            //     console.error(error);
+            //     });
      
-            }
+            // }
         
             fs.appendFile('./change2.txt',endtime)
             .then(()=>{
@@ -276,7 +280,6 @@ const interval = setInterval(() => {
         var end = Date.now()-i.start;
         console.log('time:',end);
         count +=1;
-
         total+=end;
         var total_time = total/count;
         
@@ -284,9 +287,6 @@ const interval = setInterval(() => {
         //커밋됏다고 오면 다시보내고
         //커밋됏다고 메시지가 안오면 현재 메시지를 재전송
         //커밋이 오면 다음 메시지를 다시보냄
-
     }
     */
   
-  
-
