@@ -22,7 +22,3 @@ start
 {"id":"app","key":"x","value":22,"logindex":21}
 {"id":"app","key":"x","value":23,"logindex":22}
 {"id":"app","key":"x","value":24,"logindex":23}
-{"id":"app","key":"x","value":25,"logindex":24}
-{"id":"app","key":"x","value":26,"logindex":25}
-{"id":"app","key":"x","value":27,"logindex":26}
-{"id":"app","key":"x","value":28,"logindex":27}
