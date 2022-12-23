@@ -194,8 +194,14 @@ server.on('message', (msg, rinfo) => {
 
       })
     }
+    if(i.copy =='ok'){
+      server.send(msg,i,leaderport,HOST,()=>{
+        console.log('copy ok',msg);
+
+      })
+    }
     if(i.finish == 'finish'){
-      server.send(msg,i.leaderport,HOST,()=>{
+      server.send(msg,i.favorite1port,HOST,()=>{
         console.log('send finish',msg);
       })
     }

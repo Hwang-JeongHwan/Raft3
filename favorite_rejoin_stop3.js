@@ -8,11 +8,11 @@ const fs = require('fs').promises;
 const fs1= require('fs');
 
 
-fs.writeFile('./ledger5.txt','start\n');
+fs.writeFile('./ledger3.txt','start\n');
 var before_id = 0; //이전 아이디값을 저장하기 위한 변수 
 //var array = 0;
-//var array_cnt = 0;
 var rejoin_start = 0;
+//var array_cnt = 0;
 var dead_array = 0; //죽은 장부
 var r_array = 0; //죽은 장부를 리턴
 var js_array =0; //제이슨으로 변환한 죽은 장부의 리턴 
@@ -29,46 +29,43 @@ var checkcommit_msg = {}; //커밋된 메시지와 자신이 마지막으로 받
 
 var check_cmledger_array = 0; //커밋렛져의 배열 ㄴ
 var ar_length = 0; //배열의 길이 
-
 //favorite을 위한 변수
 
 var fav1 = 0;
 var fav2 = 0;
 
+
 //var random1 = Random.getRandom(100,900);//랜덤 시간후 전송하기 위한 변수
-
-var random1 = 130;
-
+var random1 = 125;
 
 
 var before_state = 'follower';
 
 
-
 const _sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
-var orderer5 = '{"id":"orderer5","state":"follower","term":1} '; //JSON형식으로 데이터 저장 
-if (orderer5.state == 'leader'){
+var orderer3 = '{"id":"orderer3","state":"follower","term":1} '; //JSON형식으로 데이터 저장 
+if (orderer3.state == 'leader'){
   random1 = 100
 } else{
   random1 = 130
 }
-var orderer_parse = JSON.parse(orderer5);
+var orderer_parse = JSON.parse(orderer3);
 
 var copy ='';
 client.bind({
     address:'localhost',
-    port : 9005
+    port : 9003
   })
 
   
   const check=(value,state,array,rejoin,wait)=>{
-    if(value == 10 && state == 'follower' ){
+    if(value == 10000000  && state=='leader'){
       console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
-      orderer_parse.state = 'dead'; // 오더러를 죽이고
+      orderer_parse.state = 'follower'; // 오더러를 죽이고
       orderer_parse.term -=10;
       if(array==0){
-        dead_array = fs1.readFileSync('ledger5.txt').toString().split("\n");
+        dead_array = fs1.readFileSync('ledger3.txt').toString().split("\n");
         var l = dead_array.length;
         console.log('deadledger=',dead_array[l-2]);
         r_array = dead_array[l-2];
@@ -78,7 +75,7 @@ client.bind({
         js_array = JSON.parse(r_array);
         dead_array = 0;
       }
-    } 
+    }
   }
 
 const check_cmledger = (rejoin,state,array)=>{
@@ -90,7 +87,7 @@ const check_cmledger = (rejoin,state,array)=>{
   }
 }
 const interval = setInterval(() => {
-  console.log('checkcommit_msg',checkcommit_msg);
+  console.log('0checkcommit_msg',checkcommit_msg);
   var heartbit = {heartbit:"heartbit"};
 
   var orderer_check_candidate1 = mergeJSON.merge(orderer_parse,checkcommit_msg);
@@ -98,7 +95,7 @@ const interval = setInterval(() => {
   if (orderer_check_candidate.state == 'leader'){
     random1 = 100
   } else{
-    random1 = 130
+    random1 = 120
   }
   console.log('random',random1);//랜덤값을 알기위해 체크 
   
@@ -123,15 +120,15 @@ const interval = setInterval(() => {
 
 client.on("listening", function () {
   var address = client.address();
-  console.log("orderer5 listening " +
+  console.log("orderer3 listening " +
       address.address + ":" + address.port);
 });
 
   
 var before_cnt = 0;
 client.on('message', (msg, rinfo) => {
-  console.log(`orderer5 got: ${msg} from ${rinfo.address}:${rinfo.port}`);
-
+  console.log(`orderer3 got: ${msg} from ${rinfo.address}:${rinfo.port}`);
+  
   var i = JSON.parse(msg);
   if(i.id == 'app'&&i.value%10==9){
     before_state_check_leader = orderer_parse.state;
@@ -161,15 +158,15 @@ client.on('message', (msg, rinfo) => {
     if(before_logindex!=i.logindex &&js_array.logindex!=i.logindex){
       before_logindex=i.logindex;
         
-    fs.appendFile('./ledger5.txt',copy_ledger)
+    fs.appendFile('./ledger3.txt',copy_ledger)
         .then(()=>{
-            return fs.readFile('./ledger5.txt');
+            return fs.readFile('./ledger3.txt');
         })
         .then ((data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
-            console.log('ledger5:',data.toString());
+            console.log('ledger3:',data.toString());
             var copy_ok = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-            "copy":"ok","favorite1port":${i.favorite1port}}`;
-            client.send(copy_ok,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+            "copy":"ok","leaderport":${i.leaderport}}`;
+            client.send(copy_ok,i.leaderport,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
               console.log('send copy_ok',copy_ok);
             })
    
@@ -184,33 +181,32 @@ client.on('message', (msg, rinfo) => {
   }
     if(js_array.logindex==i.logindex &&orderer_parse.state =='rejoin'){ //장부복사가 끝낫다고 보내야함 
       var copy_finish = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish"}`;
+      "copy":"finish","leaderport":${i.leaderport},"finish":"finish"}`;
       var finish = JSON.parse(copy_finish);
       console.log('finish',finish);
-      client.send(copy_finish,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+      client.send(copy_finish,PORT,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
         dead_array = 0; //dead _array 를 0으로 만들어줌 => 이래야 다시 죽고나면 분기가 걸리니까 
         console.log('send copy_finish',copy_finish);
         orderer_parse.state ='follower';
-        orderer_parse.rejoin ='finish';
-        
+        orderer_parse.rejoin = 'finish'
       })
       
     }
   }
- /* if(i.rejoin_state == 'rejoin'){
-    orderer_parse.wait = 'yes';
+  /*if(i.rejoin_state == 'rejoin'){
+    orderer_parse.wait = 'yes'; //rejoin 인 노드가 있으면 하던일을 멈추고 리조인이 끝날때 까지 기다려야함 
   }
   if(i.finish == 'finish'){
-    orderer_parse.wait = 'no';
+    orderer_parse.wait = 'no'; //rejoin이 끝나면 wait을 no로 바꿔줌 
   }*/
 
   if(orderer_parse.state == 'leader' &&(i.state == 'rejoin' ||i.rejoin_state == 'rejoin')){
     check_cmledger(i.rejoin,orderer_parse.state,check_cmledger_array);
     msg_array=i;
-    rejoin_start = i.rejoinstart;
     console.log('msg_array',msg_array);
+    rejoin_start = i.rejoinstart;
     orderer_parse.rejoin = 'yes';//오더러의 rejoin이 yes면 하던일을 멈추고 장불르 복사해주어야함
-    //orderer_parse.wait = 'yes';
+    
     }
   if(orderer_parse.rejoin == 'yes' &&i.copy!='ok' &&i.copy !='finish'){ 
     console.log(check_cmledger_array);
@@ -220,7 +216,7 @@ client.on('message', (msg, rinfo) => {
     var cm_array = JSON.parse(st);
 
     var cm_array_str=`{"id":"${cm_array.id}","key":"${cm_array.key}","value":${cm_array.value},"logindex":${cm_array.logindex},"rejoinport":${msg_array.port},
-    "leaderport":9005,"rejoincopy":"send"}`;
+    "leaderport":9003,"rejoincopy":"send"}`;
 
     client.send(cm_array_str,PORT,HOST,()=>{
       console.log('send last commit',cm_array_str);
@@ -235,7 +231,7 @@ client.on('message', (msg, rinfo) => {
     var cm_array1 = JSON.parse(jt);
     if(cm_array1.logindex>msg_array.logindex){
       var cm_array1_str=`{"id":"${cm_array1.id}","key":"${cm_array1.key}","value":${cm_array1.value},"logindex":${cm_array1.logindex},"rejoinport":${msg_array.port},
-      "leaderport":9005,"rejoincopy":"send"}`;
+      "leaderport":9003,"rejoincopy":"send"}`;
 
       client.send(cm_array1_str,PORT,HOST,()=>{
         console.log('send next commit',cm_array1_str);
@@ -247,6 +243,7 @@ client.on('message', (msg, rinfo) => {
     console.log('finish',i);
     console.log(orderer_parse.rejoin);
     orderer_parse.rejoin = 'no';
+    //dead_array = 0; 
     check_cmledger_array = 0;
     var end = Date.now()-rejoin_start;
     var endtime = `end time is ${end}`;
@@ -262,26 +259,26 @@ client.on('message', (msg, rinfo) => {
       .catch((error)=>{
         console.error(error);
       });
-
+      
     console.log(end);
+   
     console.log('change',orderer_parse.rejoin);
   }
 
   
 
-  if (i.id == 'app'&& orderer_parse.rejoin !='yes' &&i.finish !='finish'){ 
+  if (i.id==='app'&& orderer_parse.rejoin !='yes' &&i.finish !='finish'){ 
     
 
     if(before_cnt != i.cnt){  //이전 카운트와 현재 들어온 메시지의 카운트가 다를경우만 장부에 저장
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
-        counter += 1
-        if (counter == 10){
-          orderer_parse.state ='rejoin' // rejoin상태로 변환 
-          var start = Date.now();
-
+        counter+=1
+        if (counter == 5){
+          orderer_parse.state = 'rejoin' // rejoin상태로 변환 
+          var start =Date.now();
           var r_array_str=`{"app_id":"${js_array.id}","key":"${js_array.key}","value":${js_array.value},"logindex":${js_array.logindex},"orderer_id":"${orderer_parse.id}"
-        ,"rejoin_state":"${orderer_parse.state}","port":9005,"rejoinstart":${start}}`;
+        ,"rejoin_state":"${orderer_parse.state}","port":9003,"rejoinstart":${start}}`;
 
           client.send(r_array_str,PORT,HOST,()=>{ //rejoin하는 오더러 장부의 마지막 부분을 리더에게 전송
             console.log('send last commit r_array',r_array_str);
@@ -296,15 +293,15 @@ client.on('message', (msg, rinfo) => {
         ledger = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.cnt}}\n`
         before_cnt = i.cnt 
     
-        fs.appendFile('./ledger5.txt',ledger)
+        fs.appendFile('./ledger3.txt',ledger)
         .then(()=>{
-            return fs.readFile('./ledger5.txt');
+            return fs.readFile('./ledger3.txt');
         })
         .then (async (data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
-            console.log('ledger5:',data.toString());
+            console.log('ledger3:',data.toString());
             if (dead_array == 0 && i.rejoin !='yes'){
               await check(i.value,orderer_parse.state,dead_array,orderer_parse.rejoin,orderer_parse.wait); //await를 check 함수 앞에 붙여줌 //이렇게하지않으면 파일에 트랜잭션을 저장하기전 장부를 읽어옴;;
-               
+              
             }
        
    
@@ -321,7 +318,7 @@ client.on('message', (msg, rinfo) => {
     if (orderer_parse.state == 'leader' && orderer_parse.rejoin !='yes' &&i.finish !='finish'){
       
       
-      var leader = {"msg":"copy","id":"orderer5","state":"leader","term":orderer_parse.term,"port":9005 } ;//leader면 카피 메시지를 전송하기 위해 json형식으로 선언//간소화 가능할듯
+      var leader = {"msg":"copy","id":"orderer3","state":"leader","term":orderer_parse.term,"port":9003 } ;//leader면 카피 메시지를 전송하기 위해 json형식으로 선언//간소화 가능할듯
       //orderer1.xx = xx이런식으로 
       var copymsg = mergeJSON.merge(i,leader);//트랜잭션과 합쳐서 전송
       console.log('copymsg',copymsg);
@@ -337,7 +334,7 @@ client.on('message', (msg, rinfo) => {
     if (orderer_parse.state == 'candidate'){
       
       
-      var leader = {"msg":"copy","id":"orderer5","state":"candiate","term":orderer_parse.term,"port":9005 } ;//leader면 카피 메시지를 전송하기 위해 json형식으로 선언//간소화 가능할듯
+      var leader = {"msg":"copy","id":"orderer3","state":"candiate","term":orderer_parse.term,"port":9003 } ;//leader면 카피 메시지를 전송하기 위해 json형식으로 선언//간소화 가능할듯
       //orderer1.xx = xx이런식으로 
       var copymsg = mergeJSON.merge(i,leader);//트랜잭션과 합쳐서 전송
       console.log('copymsg',copymsg);
@@ -356,7 +353,7 @@ client.on('message', (msg, rinfo) => {
     {
     //ledger+=`key = ${i.key} value = ${i.value} \n`
     //console.log('ledger = ',ledger);
-      var ok = {"orderer_state":"ok","orderer_id":"5"};
+      var ok = {"orderer_state":"ok","orderer_id":"3"};
       ok.time = Date.now();
       var okmsg = mergeJSON.merge(i,ok);
       delete okmsg.msg;
@@ -372,6 +369,9 @@ client.on('message', (msg, rinfo) => {
         
         before_id = i.orderer_id;
         console.log(i.orderer_id);
+        //처음 ok를 보내준 애를 저장하고
+        //그다음 ok를 보내준애를 저장해야함
+
         console.log('ok = ',i);
      // var cmtime = i.start -Date.now();
      // console.log('cmtime :',cmtime);
@@ -396,7 +396,7 @@ client.on('message', (msg, rinfo) => {
           commit.key = i.key;
           commit.value = i.value;
           commit.cnt = i.cnt;
-          commit.port = '9005';
+          commit.port = '9003';
           commit.start = i.start;
           commit.term  = orderer_parse.term;
           commit.fav1 = fav1;
@@ -448,20 +448,20 @@ client.on('message', (msg, rinfo) => {
       //before+=1;
       var commit_ledger = `key = ${checkcommit_msg.key} value = ${checkcommit_msg.value} cnt = ${checkcommit_msg.cnt}\n`
         
-      fs.copyFile('cmledger.txt','ledger5.txt')//cmledger의 장부를 먼저 복사해 오고 ledger의 값을 장부에 추가 왜냐하면 
+      fs.copyFile('cmledger.txt','ledger3.txt')//cmledger의 장부를 먼저 복사해 오고 ledger의 값을 장부에 추가 왜냐하면 
       //ledger에는 interval하게 app에서 계속해서 값을 보내고 있음-> ledger의 값을 여기서 저장하지 않고 넘어가면 cmledger에는 리더가 죽은뒤에 새로 뽑힌 리더가 처음으로 보낸
       //commit메시지가 저장되지않기 때문에 이렇게 해서 저장해야됨!
       .then(()=>{
           console.log('cmledger 복사완료');
-          fs.readFile('./ledger5.txt')
+          fs.readFile('./ledger3.txt')
               .then((data)=>{
                   console.log(data.toString());
-                    fs.appendFile('./ledger5.txt',ledger)
+                    fs.appendFile('./ledger3.txt',ledger)
                       .then(()=>{
-                        return fs.readFile('./ledger5.txt');
+                        return fs.readFile('./ledger3.txt');
                         })
                         .then((data)=>{
-                           console.log('ledger5:',data.toString());
+                           console.log('ledger3:',data.toString());
    
                          })
                        .catch((error)=>{
@@ -478,30 +478,31 @@ client.on('message', (msg, rinfo) => {
     }
   }
 }
-if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'||i.candidate =='orderer4')
-&& orderer_parse.rejoin !='yes'&&orderer_parse.state != 'dead' &&orderer_parse.state !='rejoin'&&orderer_parse.state != 'favorite'){
-  before_state = orderer_parse.state;
-  if(before_state == 'follower'){
-    orderer_parse.state =  'follower';
-  }
-  if(before_state == 'candidate'){
-    orderer_parse.state = 'favorite';
-  }
-  if(before_state == 'leader'){
-    orderer_parse.state = 'favorite'
-  }
-  console.log('change follwer',orderer_parse);
-}
-   if(i.candidate == 'orderer5'&& orderer_parse.state!='leader'&& orderer_parse.rejoin !='yes'&&orderer_parse.state !='rejoin'&&orderer_parse.state != 'dead'){
+   if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer5'||i.candidate =='orderer4')
+   && orderer_parse.rejoin !='yes'&&orderer_parse.state != 'dead' &&orderer_parse.state !='rejoin'&&orderer_parse.state != 'favorite'){
+    before_state = orderer_parse.state;
+    if(before_state == 'follower'){
+      orderer_parse.state =  'follower';
+    }
+    if(before_state == 'candidate'){
+      orderer_parse.state = 'favorite';
+    }
+    if(before_state == 'leader'){
+      orderer_parse.state = 'favorite'
+    }
+    console.log('change follwer',orderer_parse);
+   }
+   if(i.candidate == 'orderer3'&& orderer_parse.state!='leader'&& orderer_parse.rejoin !='yes'&&orderer_parse.state !='rejoin'&&orderer_parse.state != 'dead'){
      orderer_parse.state = 'candidate';
      console.log('change candidate',orderer_parse);
 
    }
     if(orderer_parse.state == 'leader' && i.commit == 'commit'  && orderer_parse.rejoin !='yes')
-    {
+    { 
+     
       orderer_parse.term += 1;
       console.log('this is commit');
-      fs.copyFile('ledger5.txt','cmledger.txt')
+      fs.copyFile('ledger3.txt','cmledger.txt')
               .then(()=>{
                   console.log('복사완료');
                   fs.readFile('./cmledger.txt')
@@ -515,16 +516,16 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
               .catch((error)=>{
                 console.error(error);
             });
+      
           }
     if(orderer_parse.state != 'leader' && i.commit == 'commit')
     {
-      if((i.fav1 =='5' || i.fav2 == '5')&&orderer_parse.state != 'rejoin'&&
-      orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){ 
+      if((i.fav1 =='3' || i.fav2 == '3')&&orderer_parse.state != 'candidate'){ 
         //fav1 or fav2 가 해당 오더러이면 favorite으로 상태 변경+ 현재 상태가 candidate 도아니고 dead  도아니고 rejoin 도 아닌경우 = follower인경우
         orderer_parse.state = 'favorite';
         console.log('state change favorite',orderer_parse);
       }
-      if(i.fav1 !='5' && i.fav2 !='5'&&orderer_parse.state != 'rejoin'&&orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){
+      if(i.fav1 !='3' && i.fav2 !='3'&&orderer_parse.state != 'rejoin'&&orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){
         //fav1 or fav2 가 해당 오더러가 아니면 follower로 상태 변경+ 현재 상태가 candidate 도아니고 dead  도아니고 rejoin 도 아닌경우 = favorite인경우
         orderer_parse.state = 'follower';
         console.log('state change favorite',orderer_parse);
@@ -532,11 +533,11 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
       }
       orderer_parse.term = i.term
       console.log('this is commit');
-      fs.copyFile('cmledger.txt','ledger5.txt')
+      fs.copyFile('cmledger.txt','ledger3.txt')
               .then(()=>{
                   console.log('cmledger 복사완료');
                   //checkcommit_msg = i.commit;
-                  fs.readFile('./ledger5.txt')
+                  fs.readFile('./ledger3.txt')
                       .then((data)=>{
                           console.log(data.toString());
                           checkcommit_msg.key = i .key;
@@ -555,7 +556,7 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
         const timer = async () => {
           try{
     
-            
+            //var time = Random.getRandom(500,1500);
             await _sleep(random1); //1~2초 사이의 랜덤값이 지난후 전송하도록
             orderer_parse.term+=1;
         }

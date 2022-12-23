@@ -168,8 +168,8 @@ client.on('message', (msg, rinfo) => {
         .then ((data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
             console.log('ledger5:',data.toString());
             var copy_ok = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-            "copy":"ok","favorite1port":${i.favorite1port}}`;
-            client.send(copy_ok,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+            "copy":"ok","leaderport":${i.leaderport}}`;
+            client.send(copy_ok,i.leaderport,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
               console.log('send copy_ok',copy_ok);
             })
    
@@ -184,10 +184,10 @@ client.on('message', (msg, rinfo) => {
   }
     if(js_array.logindex==i.logindex &&orderer_parse.state =='rejoin'){ //장부복사가 끝낫다고 보내야함 
       var copy_finish = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish"}`;
+      "copy":"finish","leaderport":${i.leaderport},"finish":"finish"}`;
       var finish = JSON.parse(copy_finish);
       console.log('finish',finish);
-      client.send(copy_finish,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+      client.send(copy_finish,PORT,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
         dead_array = 0; //dead _array 를 0으로 만들어줌 => 이래야 다시 죽고나면 분기가 걸리니까 
         console.log('send copy_finish',copy_finish);
         orderer_parse.state ='follower';
