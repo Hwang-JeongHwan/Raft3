@@ -216,7 +216,7 @@ client.on('message', (msg, rinfo) => {
     orderer_parse.rejoin = 'yes';//오더러의 rejoin이 yes면 하던일을 멈추고 장불르 복사해주어야함
     
     }
-  if(orderer_parse.rejoin == 'yes' &&i.copy!='ok' &&i.copy !='finish'){ 
+  if(orderer_parse.state == "favorite1" && orderer_parse.rejoin == 'yes' &&i.copy!='ok' &&i.copy !='finish'){ 
     console.log(check_cmledger_array);
     console.log(ar_length);
     console.log('check_cmledger_array[ar_length-1',check_cmledger_array[ar_length-2]);
@@ -227,24 +227,38 @@ client.on('message', (msg, rinfo) => {
     "favorite1port":9001,"rejoincopy":"send"}`;
 
     client.send(cm_array_str,msg_array.port,HOST,()=>{
-      console.log('send last commit',cm_array_str);
+      console.log('send last commit',cm_array_str); // favorite1 이 가지고 있는 마지막 commit을 보내줌
 
     });
     
     
-  }
+  } 
   if(orderer_parse.state=='favorite1'&&i.copy == 'ok' &&i.finish != 'finish' && orderer_parse.rejoin =='yes'){
-    ar_length-=1;
-    var jt=check_cmledger_array[ar_length-2];
-    var cm_array1 = JSON.parse(jt);
-    if(cm_array1.logindex>msg_array.logindex){
-      var cm_array1_str=`{"id":"${cm_array1.id}","key":"${cm_array1.key}","value":${cm_array1.value},"logindex":${cm_array1.logindex},"rejoinport":${msg_array.port},
-      "favorite1port":9001,"rejoincopy":"send"}`;
-
+    if (orderer_parse.stop == true){
+      var cm_array1_str=`{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"rejoinport":${i.port},
+      "favorite1port":9001,"rejoincopy":"send","retry":"yes"}`;
+      
       client.send(cm_array1_str,msg_array.port,HOST,()=>{
-        console.log('send next commit',cm_array1_str);
+        console.log('send retry',cm_array1_str);
 
     });
+    }
+    else
+    {
+      // 여기서 stop == true면 wait이라고 보냄 -> rejoin에서는 다시 보냄 
+      // stop == false일 경우에만 진행 
+      ar_length-=1;
+      var jt=check_cmledger_array[ar_length-2];
+      var cm_array1 = JSON.parse(jt);
+      if(cm_array1.logindex>msg_array.logindex){
+        var cm_array1_str=`{"id":"${cm_array1.id}","key":"${cm_array1.key}","value":${cm_array1.value},"logindex":${cm_array1.logindex},"rejoinport":${msg_array.port},
+        "favorite1port":9001,"rejoincopy":"send"}`;
+
+        client.send(cm_array1_str,msg_array.port,HOST,()=>{
+          console.log('send next commit',cm_array1_str);
+
+      });
+    }
   }
   }
   if(orderer_parse.state=='favorite1'&&i.finish == 'finish' && orderer_parse.rejoin =='yes'){
@@ -356,8 +370,10 @@ client.on('message', (msg, rinfo) => {
     }
   }
   
-    if(i.msg =='copy'&&orderer_parse.state!='leader' && orderer_parse.state != 'candidate' && orderer_parse.rejoin !='yes')//카피 메시지가 오고 
+    if(i.msg =='copy'&&orderer_parse.state!='leader' && orderer_parse.state != 'candidate')//카피 메시지가 오고 
     {
+      orderer_parse.stop = true;
+      console.log(orderer_parse.stop)
     //ledger+=`key = ${i.key} value = ${i.value} \n`
     //console.log('ledger = ',ledger);
       var ok = {"orderer_state":"ok","orderer_id":"1"};
@@ -367,7 +383,9 @@ client.on('message', (msg, rinfo) => {
       var str_okmsg = JSON.stringify(okmsg);
     
       client.send(str_okmsg, PORT, HOST, function(err,bytes){
-        console.log('send ok',str_okmsg); 
+        console.log('send ok',str_okmsg);
+        orderer_parse.stop = false; 
+        console.log(orderer_parse.stop);
         
       });
    }
@@ -534,9 +552,10 @@ client.on('message', (msg, rinfo) => {
       }
       if(i.fav1 !='1' && i.fav2 !='1'&&orderer_parse.state != 'rejoin'&&orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){
         //fav1 or fav2 가 해당 오더러가 아니면 follower로 상태 변경+ 현재 상태가 candidate 도아니고 dead  도아니고 rejoin 도 아닌경우 = favorite인경우
-        orderer_parse.state = 'follower';
-        console.log('state change favorite',orderer_parse);
-      
+        if (orderer_parse.rejoin != 'yes'){
+          orderer_parse.state = 'follower';
+          console.log('state change favorite',orderer_parse);
+        }
       }
       orderer_parse.term = i.term
       console.log('this is commit');

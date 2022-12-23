@@ -63,7 +63,7 @@ client.bind({
 
   
   const check=(value,state,array,rejoin,wait)=>{
-    if(value == 10 && state == 'follower' ){
+    if(value == 10 && state == 'follower'){
       console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
       orderer_parse.state = 'dead'; // 오더러를 죽이고
       orderer_parse.term -=10;
@@ -276,7 +276,8 @@ client.on('message', (msg, rinfo) => {
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
         counter += 1
-        if (counter == 10){
+        console.log('counter\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',counter);
+        if (counter == 30){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 
@@ -302,7 +303,7 @@ client.on('message', (msg, rinfo) => {
         })
         .then (async (data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
             console.log('ledger5:',data.toString());
-            if (dead_array == 0 && i.rejoin !='yes'){
+            if (dead_array == 0 && i.rejoin !='yes' && orderer_parse.rejoin != 'finish'){
               await check(i.value,orderer_parse.state,dead_array,orderer_parse.rejoin,orderer_parse.wait); //await를 check 함수 앞에 붙여줌 //이렇게하지않으면 파일에 트랜잭션을 저장하기전 장부를 읽어옴;;
                
             }
