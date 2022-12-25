@@ -36,4 +36,3 @@ start
 {"id":"app","key":"x","value":36,"logindex":35}
 {"id":"app","key":"x","value":37,"logindex":36}
 {"id":"app","key":"x","value":38,"logindex":37}
-{"id":"app","key":"x","value":39,"logindex":38}
