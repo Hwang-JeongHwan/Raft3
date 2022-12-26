@@ -82,11 +82,7 @@ client.on('message',(msg,rinfo)=>{
                 //await _sleep(5000);
                 //mergeJSON.merge
 /*                var cmtime = i.start - Date.now();
-                if (cmtime>2000){
-                    console.log('time over');
-                }
-                var retry_merge = mergeJSON.merge(app,retry);
-                var y = JSON.stringify(retry_merge);//JSON을 string형식으로 변환
+
 */              app.try +=1;
                 var j = JSON.stringify(app)
                 client.send(j, PORT, HOST,(err, bytes) => {
