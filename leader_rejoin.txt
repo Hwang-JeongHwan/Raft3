@@ -1,0 +1,2 @@
+leader_rejoin end time is 984 
+leader_rejoin end time is 794 

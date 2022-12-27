@@ -267,10 +267,10 @@ client.on('message', (msg, rinfo) => {
     orderer_parse.rejoin = 'no';
     check_cmledger_array = 0;
     var end = Date.now()-rejoin_start;
-    var endtime = `end time is ${end}`;
-    fs.appendFile('./rejoin.txt',endtime)
+    var endtime = `favorite_rejoin_stop end time is ${end}`;
+    fs.appendFile('./favorite_rejoin_stop.txt',endtime)
       .then(()=>{
-        return fs.readFile('./rejoin.txt')
+        return fs.readFile('./favorite_rejoin_stop.txt')
       
       })
       .then((data)=>{

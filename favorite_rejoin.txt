@@ -1,0 +1,4 @@
+favorite_rejoin end time is 857 
+favorite_rejoin end time is 999 
+favorite_rejoin end time is 854 
+favorite_rejoin end time is 841 

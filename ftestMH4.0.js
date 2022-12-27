@@ -194,8 +194,14 @@ server.on('message', (msg, rinfo) => {
 
       })
     }
+    if(i.copy =='ok'){
+      server.send(msg,i,leaderport,HOST,()=>{
+        console.log('copy ok',msg);
+
+      })
+    }
     if(i.finish == 'finish'){
-      server.send(msg,i.leaderport,HOST,()=>{
+      server.send(msg,i.favorite1port,HOST,()=>{
         console.log('send finish',msg);
       })
     }
@@ -212,13 +218,16 @@ server.on('message', (msg, rinfo) => {
         /*
       server.send(msg,9002,HOST, function(err,bytes){
         console.log('ok message send to orderer2');
+
       });
       server.send(msg,9003,HOST, function(err,bytes){
         console.log('ok message send to orderer3');
+
       });
         
       server.send(msg,9004,HOST, function(err,bytes){
         console.log('ok message send to orderer4');
+
       });
         
       server.send(msg,9005,HOST, function(err,bytes){
@@ -278,7 +287,9 @@ server.on('message', (msg, rinfo) => {
     }*/
 /*function check_term(before_id_check_term,i) {
   if(before_id_check_term != i){
+
   }
+
 }*/
     if(commit_msg.key == i.key && commit_msg.value == i.value && commit_msg.cnt == i.cnt &&i.state != 'rejoin'&&i.state != 'dead'&&i.state!='follower' ){ 
       //candidate를 선출하기위해 마지막으로 커밋된 메시지와 candidate가 되려하는 오더러 장부의 마지막 메시지를 비교
