@@ -85,9 +85,3 @@ start
 {"id":"app","key":"x","value":85,"logindex":84}
 {"id":"app","key":"x","value":86,"logindex":85}
 {"id":"app","key":"x","value":87,"logindex":86}
-{"id":"app","key":"x","value":88,"logindex":87}
-{"id":"app","key":"x","value":89,"logindex":88}
-{"id":"app","key":"x","value":90,"logindex":89}
-{"id":"app","key":"x","value":91,"logindex":90}
-{"id":"app","key":"x","value":92,"logindex":91}
-{"id":"app","key":"x","value":93,"logindex":92}

@@ -4,3 +4,9 @@ favorite_rejoin_stop end time is 817
 favorite_rejoin_stop end time is 352 
 favorite_rejoin_stop end time is 844 
 favorite_rejoin_stop end time is 848 
+favorite_rejoin_stop end time is 1464 
+favorite_rejoin_stop end time is 1464 
+favorite_rejoin_stop end time is 1466 
+favorite_rejoin_stop end time is 1465 
+favorite_rejoin_stop end time is 1465 
+favorite_rejoin_stop end time is 1463 

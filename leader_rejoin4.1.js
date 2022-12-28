@@ -401,7 +401,7 @@ client.on('message', (msg, rinfo) => {
           commit.fav1 = fav1;
           commit.fav2 = fav2;
           commit.try = i.try;
-
+          commit.leader = 'orderer4';
         
         
           var commitmsg = JSON.stringify(commit);
