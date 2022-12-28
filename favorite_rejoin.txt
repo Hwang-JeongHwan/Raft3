@@ -3,3 +3,6 @@ favorite_rejoin end time is 999
 favorite_rejoin end time is 854 
 favorite_rejoin end time is 841 
 favorite_rejoin end time is 492 
+favorite_rejoin end time is 976 
+favorite_rejoin end time is 488 
+favorite_rejoin end time is 1466 

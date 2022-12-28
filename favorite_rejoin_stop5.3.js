@@ -285,7 +285,7 @@ client.on('message', (msg, rinfo) => {
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
         counter += 1
-        if (counter == 10){
+        if (counter == 1000){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 

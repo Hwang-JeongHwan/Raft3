@@ -557,6 +557,8 @@ client.on('message', (msg, rinfo) => {
           orderer_parse.state = 'follower';
           console.log('state change favorite',orderer_parse);
         }
+        // 테스트를 위해 항상 favorite1인것으로 가정
+        orderer_parse.state = 'favorite1' 
       }
       orderer_parse.term = i.term
       console.log('this is commit');
