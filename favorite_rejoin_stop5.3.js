@@ -22,7 +22,7 @@ var  ledger = 'start \n';
 var counter = 0;
 var before_logindex =0; //이전값의 인덱스
 var before = 0; //이전 cnt값과 비교하기 위한 변수 // 트랜잭션에서 오는 카운트값과 이전 값을 비교하기위한 변수 
-
+var deadtime = 0;
 var before_cnt = 0; // 트랜잭션에서 오는 카운트값과 이전 값을 비교하기위한 변수
 var commit_cnt = {"commit_cnt":0}; //commit을 하기위한 ok메시지의 카운팅을 하기위한 변수 커밋을 보낼때 쓸 카운트 ->2가되면 커밋 메시지 보내 ㅁ
 var checkcommit_msg = {}; //커밋된 메시지와 자신이 마지막으로 받은 커밋메시지를 비교하기 위한 변수
@@ -66,6 +66,7 @@ client.bind({
     if(value == 10 && state == 'follower' ){
       console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
       orderer_parse.state = 'dead'; // 오더러를 죽이고
+      deadtime = Date.now();
       orderer_parse.term -=10;
       if(array==0){
         dead_array = fs1.readFileSync('ledger5.txt').toString().split("\n");
@@ -193,7 +194,7 @@ client.on('message', (msg, rinfo) => {
   }
     if(js_array.logindex==i.logindex &&orderer_parse.state =='rejoin'){ //장부복사가 끝낫다고 보내야함 
       var copy_finish = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish"}`;
+      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish", "deadtime" : ${deadtime}}`;
       var finish = JSON.parse(copy_finish);
       console.log('finish',finish);
       client.send(copy_finish,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
@@ -285,7 +286,7 @@ client.on('message', (msg, rinfo) => {
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
         counter += 1
-        if (counter == 1000){
+        if (counter == 7){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 
@@ -530,7 +531,7 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
       if((i.fav1 =='5' || i.fav2 == '5')&&orderer_parse.state != 'rejoin'&&
       orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){ 
         //fav1 or fav2 가 해당 오더러이면 favorite으로 상태 변경+ 현재 상태가 candidate 도아니고 dead  도아니고 rejoin 도 아닌경우 = follower인경우
-        orderer_parse.state = 'favorite';
+        orderer_parse.state = 'follower';
         console.log('state change favorite',orderer_parse);
       }
       if(i.fav1 !='5' && i.fav2 !='5'&&orderer_parse.state != 'rejoin'&&orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){

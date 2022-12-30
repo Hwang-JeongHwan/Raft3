@@ -138,9 +138,9 @@ client.on('message',(msg,rinfo)=>{
     
     if (i.commit == 'commit'){
         var end = Date.now()-i.start;
-        var endtime = `response time is ${end} `;
+        var endtime = `response time is ${end}, `;
         var endtime2 = `${end}\n`;
-        endtime += `Membership leader : ${i.leader}, Members :`
+        endtime += `Membership leader : ${i.leader}, Members : `
         if (i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
             endtime += 'orderer1 '
         }   
@@ -198,9 +198,9 @@ client.on('message',(msg,rinfo)=>{
      
             // }
         
-            fs.appendFile('./change2.txt',endtime)
+            fs.appendFile('./app_f_stop.txt',endtime)
             .then(()=>{
-              return fs.readFile('./change2.txt')
+              return fs.readFile('./app_f_stop.txt')
             
             })
             .then((data)=>{
@@ -210,9 +210,9 @@ client.on('message',(msg,rinfo)=>{
             .catch((error)=>{
               console.error(error);
             });
-            fs.appendFile('./change2.1.txt',endtime2)
+            fs.appendFile('./app_f_stop1.txt',endtime2)
             .then(()=>{
-              return fs.readFile('./change2.1.txt')
+              return fs.readFile('./app_f_stop1.txt')
             
             })
             .then((data)=>{

@@ -15,7 +15,8 @@ var count2 = 0;
 var total_time = 0;
 var total_time2 = 0;
 var before_port = '9003';
-
+var timer_check = false
+var timer1 = '';
 var random = Random.getRandom(1000,2000);
 var random1 = 1462.1086229919283;
 
@@ -247,7 +248,41 @@ client.on('message',(msg,rinfo)=>{
         //커밋이 오면 다음 메시지를 다시보냄
 
     }
-    
+  if (timer_check == false){
+  timer1 = '{"timer":"deadtime","id":"app","key":"1","value":"1","cnt":"1"}';
+  timer_check = true;
+  var deadtime = Date.now();
+  setTimeout(function () {
+      
+      console.log("dead");
+      console.log(Date.now() - deadtime);
+      var rejointime = Date.now();
+      client.send(timer1, 9005, HOST, function(err, bytes) {
+          
+          console.log('deadtime send' + HOST +':'+ PORT);
+          console.log(timer1);
+          
+      
+        
+        });
+      setTimeout(function () {
+          
+          console.log("rejoin");
+          console.log(Date.now() - rejointime);
+          
+          var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
+          client.send(timer2, 9005, HOST, function(err, bytes) {
+              
+              console.log('rejointime send' + HOST +':'+ PORT);
+              console.log(timer2);
+              
+          
+            
+            });
+  
+          }, 10000);
+      }, 10000);
+  }
 
 });
 

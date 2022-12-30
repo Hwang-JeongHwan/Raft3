@@ -7,8 +7,7 @@ const client = dgram.createSocket('udp4');
 const fs = require('fs').promises;
 const fs1= require('fs');
 
-var deadtime = 0;
-
+var timer_check = false;
 fs.writeFile('./ledger5.txt','start\n');
 var before_id = 0; //이전 아이디값을 저장하기 위한 변수 
 //var array = 0;
@@ -23,7 +22,7 @@ var  ledger = 'start \n';
 var counter = 0;
 var before_logindex =0; //이전값의 인덱스
 var before = 0; //이전 cnt값과 비교하기 위한 변수 // 트랜잭션에서 오는 카운트값과 이전 값을 비교하기위한 변수 
-
+var deadtime = 0;
 var before_cnt = 0; // 트랜잭션에서 오는 카운트값과 이전 값을 비교하기위한 변수
 var commit_cnt = {"commit_cnt":0}; //commit을 하기위한 ok메시지의 카운팅을 하기위한 변수 커밋을 보낼때 쓸 카운트 ->2가되면 커밋 메시지 보내 ㅁ
 var checkcommit_msg = {}; //커밋된 메시지와 자신이 마지막으로 받은 커밋메시지를 비교하기 위한 변수
@@ -67,7 +66,8 @@ client.bind({
     if(value == 10 && state == 'follower' ){
       console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
       orderer_parse.state = 'dead'; // 오더러를 죽이고
-      deadtime = Date.now()
+      deadtime = Date.now();
+      
       orderer_parse.term -=10;
       if(array==0){
         dead_array = fs1.readFileSync('ledger5.txt').toString().split("\n");
@@ -79,8 +79,30 @@ client.bind({
         console.log('r_array\n\n\n\n\n\n\n',dead_array)
         js_array = JSON.parse(r_array);
         dead_array = 0;
+
+
+        setTimeout(function () {
+                    
+          console.log("rejoin");
+
+          var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
+          client.send(timer2, 9005, HOST, function(err, bytes) {
+              
+              console.log('rejointime send' + HOST +':'+ PORT);
+              console.log(timer2);
+              
+          
+            
+            });
+  
+          }, 100000);
+
+
+
       }
-    } 
+    }
+    
+
   }
 
 const check_cmledger = (rejoin,state,array)=>{
@@ -158,10 +180,19 @@ client.on('message', (msg, rinfo) => {
     
   }
   if(orderer_parse.state=='rejoin' && i.rejoincopy=='send'){ //오더러의 상태가 rejoin이고 카피 메시지를 리더가 보냈으면
-    var copy_ledger = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term}}\n`
+ 
+    if (i.retry == 'yes'){
+        var copy_ok = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
+            "copy":"ok","favorite1port":${i.favorite1port}}`;
+            client.send(copy_ok,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+              console.log('send copy_ok',copy_ok);
+            }) 
 
-    if(before_logindex!=i.logindex &&js_array.logindex!=i.logindex){
+    }
+
+    if(before_logindex!=i.logindex &&js_array.logindex!=i.logindex && i.retry != 'yes'){
       before_logindex=i.logindex;
+      var copy_ledger = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term}}\n`
         
     fs.appendFile('./ledger5.txt',copy_ledger)
         .then(()=>{
@@ -170,8 +201,8 @@ client.on('message', (msg, rinfo) => {
         .then ((data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
             console.log('ledger5:',data.toString());
             var copy_ok = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-            "copy":"ok","leaderport":${i.leaderport}}`;
-            client.send(copy_ok,i.leaderport,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+            "copy":"ok","favorite1port":${i.favorite1port}}`;
+            client.send(copy_ok,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
               console.log('send copy_ok',copy_ok);
             })
    
@@ -186,10 +217,10 @@ client.on('message', (msg, rinfo) => {
   }
     if(js_array.logindex==i.logindex &&orderer_parse.state =='rejoin'){ //장부복사가 끝낫다고 보내야함 
       var copy_finish = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-      "copy":"finish","leaderport":${i.leaderport},"finish":"finish","deadtime":${deadtime}}`;
+      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish", "deadtime" : ${deadtime}}`;
       var finish = JSON.parse(copy_finish);
       console.log('finish',finish);
-      client.send(copy_finish,PORT,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+      client.send(copy_finish,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
         dead_array = 0; //dead _array 를 0으로 만들어줌 => 이래야 다시 죽고나면 분기가 걸리니까 
         console.log('send copy_finish',copy_finish);
         orderer_parse.state ='follower';
@@ -277,13 +308,13 @@ client.on('message', (msg, rinfo) => {
     if(before_cnt != i.cnt){  //이전 카운트와 현재 들어온 메시지의 카운트가 다를경우만 장부에 저장
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
-        counter += 1
-        if (counter == 32){
+        
+        if (i.timer == 'rejointime'){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 
           var r_array_str=`{"app_id":"${js_array.id}","key":"${js_array.key}","value":${js_array.value},"logindex":${js_array.logindex},"orderer_id":"${orderer_parse.id}"
-        ,"rejoin_state":"${orderer_parse.state}","port":9005,"rejoinstart":${start}}`;
+        ,"rejoin_state":"${orderer_parse.state}","port":9005,"rejoinstart":${start}, "try" : "1"}`;
 
           client.send(r_array_str,PORT,HOST,()=>{ //rejoin하는 오더러 장부의 마지막 부분을 리더에게 전송
             console.log('send last commit r_array',r_array_str);
@@ -304,7 +335,7 @@ client.on('message', (msg, rinfo) => {
         })
         .then (async (data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
             console.log('ledger5:',data.toString());
-            if (dead_array == 0 && i.rejoin !='yes'){
+            if (dead_array == 0 && i.rejoin !='yes' && orderer_parse.rejoin != 'finish'){
               await check(i.value,orderer_parse.state,dead_array,orderer_parse.rejoin,orderer_parse.wait); //await를 check 함수 앞에 붙여줌 //이렇게하지않으면 파일에 트랜잭션을 저장하기전 장부를 읽어옴;;
                
             }
@@ -354,8 +385,8 @@ client.on('message', (msg, rinfo) => {
     }
   }
   
-  if(i.msg =='copy'&&orderer_parse.state!='leader' && orderer_parse.state != 'candidate' && orderer_parse.state != 'dead' && orderer_parse.state != 'rejoin')//카피 메시지가 오고 
-  {
+    if(i.msg =='copy'&&orderer_parse.state!='leader' && orderer_parse.state != 'candidate' && orderer_parse.state != 'dead' && orderer_parse.state != 'rejoin')//카피 메시지가 오고 
+    {
     //ledger+=`key = ${i.key} value = ${i.value} \n`
     //console.log('ledger = ',ledger);
       var ok = {"orderer_state":"ok","orderer_id":"5"};

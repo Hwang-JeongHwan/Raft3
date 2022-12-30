@@ -7,7 +7,7 @@ const client = dgram.createSocket('udp4');
 const fs = require('fs').promises;
 const fs1= require('fs');
 
-
+var deadtime = 0;
 fs.writeFile('./ledger5.txt','start\n');
 var before_id = 0; //이전 아이디값을 저장하기 위한 변수 
 //var array = 0;
@@ -65,8 +65,11 @@ client.bind({
   const check=(value,state,array,rejoin,wait)=>{
     if(value == 10 && state == 'follower'){
       console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
+      
       orderer_parse.state = 'dead'; // 오더러를 죽이고
+      deadtime = Date.now();
       orderer_parse.term -=10;
+      
       if(array==0){
         dead_array = fs1.readFileSync('ledger5.txt').toString().split("\n");
         var l = dead_array.length;
@@ -77,6 +80,21 @@ client.bind({
         console.log('r_array\n\n\n\n\n\n\n',dead_array)
         js_array = JSON.parse(r_array);
         dead_array = 0;
+        setTimeout(function () {
+                    
+          console.log("rejoin");
+
+          var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
+          client.send(timer2, 9005, HOST, function(err, bytes) {
+              
+              console.log('rejointime send' + HOST +':'+ PORT);
+              console.log(timer2);
+              
+          
+            
+            });
+  
+          }, 10000);
       }
     } 
   }
@@ -185,7 +203,7 @@ client.on('message', (msg, rinfo) => {
   }
     if(js_array.logindex==i.logindex &&orderer_parse.state =='rejoin'){ //장부복사가 끝낫다고 보내야함 
       var copy_finish = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish"}`;
+      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish", "deadtime":${deadtime}}`;
       var finish = JSON.parse(copy_finish);
       console.log('finish',finish);
       client.send(copy_finish,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
@@ -278,7 +296,7 @@ client.on('message', (msg, rinfo) => {
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
         counter += 1
         console.log('counter\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',counter);
-        if (counter == 1000){
+        if (counter == 15){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 
@@ -523,7 +541,7 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
       if((i.fav1 =='5' || i.fav2 == '5')&&orderer_parse.state != 'rejoin'&&
       orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){ 
         //fav1 or fav2 가 해당 오더러이면 favorite으로 상태 변경+ 현재 상태가 candidate 도아니고 dead  도아니고 rejoin 도 아닌경우 = follower인경우
-        orderer_parse.state = 'favorite';
+        orderer_parse.state = 'follower';
         console.log('state change favorite',orderer_parse);
       }
       if(i.fav1 !='5' && i.fav2 !='5'&&orderer_parse.state != 'rejoin'&&orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){
@@ -572,4 +590,4 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
         
     }
   });
-    
+

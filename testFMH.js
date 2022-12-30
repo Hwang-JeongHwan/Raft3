@@ -384,26 +384,26 @@ server.on('message', (msg, rinfo) => {
         if (i.state != 'leader' && i.heartbit == 'heartbit'){
             cnt+=1;
             console.log('cnt',cnt);
-            if (cnt == 13){
+            if (cnt == 100000){
               cnt = 0;
                 
               var noleader = '{"leader":"noleader"}';
-              server.send(noleader,9001,HOST,()=>{
-                  console.log('send',noleader);
-                });
-              server.send(noleader,9002,HOST,()=>{
-                console.log('send',noleader);
+            //   server.send(noleader,9001,HOST,()=>{
+            //       console.log('send',noleader);
+            //     });
+            //   server.send(noleader,9002,HOST,()=>{
+            //     console.log('send',noleader);
                 
-              });
-              server.send(noleader,9003,HOST,()=>{
-                console.log('send',noleader);
-              });
-              server.send(noleader,9004,HOST,()=>{
-                console.log('send',noleader);
-              });
-              server.send(noleader,9005,HOST,()=>{
-                console.log('send',noleader);
-            });
+            //   });
+            //   server.send(noleader,9003,HOST,()=>{
+            //     console.log('send',noleader);
+            //   });
+            //   server.send(noleader,9004,HOST,()=>{
+            //     console.log('send',noleader);
+            //   });
+            //   server.send(noleader,9005,HOST,()=>{
+            //     console.log('send',noleader);
+            // });
             }
         }
         if (i.state == 'leader'){

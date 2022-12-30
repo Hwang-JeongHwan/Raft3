@@ -79,6 +79,27 @@ client.bind({
         console.log('r_array\n\n\n\n\n\n\n',dead_array)
         js_array = JSON.parse(r_array);
         dead_array = 0;
+
+
+
+        setTimeout(function () {
+                    
+          console.log("rejoin");
+
+          var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
+          client.send(timer2, 9005, HOST, function(err, bytes) {
+              
+              console.log('rejointime send' + HOST +':'+ PORT);
+              console.log(timer2);
+              
+          
+            
+            });
+  
+          }, 100000);
+
+
+
       }
     } 
   }
@@ -277,8 +298,8 @@ client.on('message', (msg, rinfo) => {
     if(before_cnt != i.cnt){  //이전 카운트와 현재 들어온 메시지의 카운트가 다를경우만 장부에 저장
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
-        counter += 1
-        if (counter == 32){
+        
+        if (i.timer == 'rejointime'){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 

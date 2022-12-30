@@ -8,6 +8,7 @@ const fs = require('fs').promises;
 const fs1= require('fs');
 
 var deadtime = 0;
+var timer_check = false;
 
 fs.writeFile('./ledger5.txt','start\n');
 var before_id = 0; //이전 아이디값을 저장하기 위한 변수 
@@ -63,16 +64,16 @@ client.bind({
   })
 
   
-  const check=(value,state,array,rejoin,wait)=>{
-    if(value == 10 && state == 'follower' ){
-      console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
+  const check=(timer, state, array, rejoin, wait)=>{
+    if(timer == 'deadtime' && state == 'follower' ){
+      console.log(timer,'dead!!!!\n\n\n\n\n\n\n\n')
       orderer_parse.state = 'dead'; // 오더러를 죽이고
-      deadtime = Date.now()
+      deadtime = Date.now();
       orderer_parse.term -=10;
       if(array==0){
         dead_array = fs1.readFileSync('ledger5.txt').toString().split("\n");
         var l = dead_array.length;
-        console.log('deadledger=',dead_array[l-2]);
+        console.log('deadledger=',dead_array[l-3]);
         r_array = dead_array[l-2];
         
         console.log('dead_array\n\n\n\n\n\n\n',dead_array);
@@ -277,8 +278,8 @@ client.on('message', (msg, rinfo) => {
     if(before_cnt != i.cnt){  //이전 카운트와 현재 들어온 메시지의 카운트가 다를경우만 장부에 저장
       // 일정시간 커밋이 오지않으면 이전값을 계속해서 보내니까 중복된값을 저장하지 않기위해 위와같이 비교 후 저장 
       if(orderer_parse.state =='dead'){ //애플리케이션의 값을 5개 받으면 
-        counter += 1
-        if (counter == 32){
+        
+        if (i.timer == 'rejointime'){
           orderer_parse.state ='rejoin' // rejoin상태로 변환 
           var start = Date.now();
 
@@ -305,8 +306,8 @@ client.on('message', (msg, rinfo) => {
         .then (async (data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
             console.log('ledger5:',data.toString());
             if (dead_array == 0 && i.rejoin !='yes'){
-              await check(i.value,orderer_parse.state,dead_array,orderer_parse.rejoin,orderer_parse.wait); //await를 check 함수 앞에 붙여줌 //이렇게하지않으면 파일에 트랜잭션을 저장하기전 장부를 읽어옴;;
-               
+              await check(i.timer,orderer_parse.state,dead_array,orderer_parse.rejoin,orderer_parse.wait); //await를 check 함수 앞에 붙여줌 //이렇게하지않으면 파일에 트랜잭션을 저장하기전 장부를 읽어옴;;
+              
             }
        
    
@@ -520,6 +521,43 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
           }
     if(orderer_parse.state != 'leader' && i.commit == 'commit')
     {
+      // if (timer_check == false){
+      //   timer1 = '{"timer":"deadtime","id":"app","key":"1","value":"1","cnt":"1"}';
+      //   timer_check = true;
+
+      //   setTimeout(function () {
+            
+      //       console.log("dead");
+
+
+      //       client.send(timer1, 9005, HOST, function(err, bytes) {
+                
+      //           console.log('deadtime send' + HOST +':'+ PORT);
+      //           console.log(timer1);
+                
+            
+              
+      //         });
+      //       setTimeout(function () {
+                
+      //           console.log("rejoin");
+
+                
+      //           var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
+      //           client.send(timer2, 9005, HOST, function(err, bytes) {
+                    
+      //               console.log('rejointime send' + HOST +':'+ PORT);
+      //               console.log(timer2);
+                    
+                
+                  
+      //             });
+        
+      //           }, 10000);
+      //       }, 10000);
+      //   }  
+
+
       if((i.fav1 =='5' || i.fav2 == '5')&&orderer_parse.state != 'rejoin'&&
       orderer_parse.state !='dead'&&orderer_parse.state != 'candidate'){ 
         //fav1 or fav2 가 해당 오더러이면 favorite으로 상태 변경+ 현재 상태가 candidate 도아니고 dead  도아니고 rejoin 도 아닌경우 = follower인경우
@@ -552,7 +590,11 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
               .catch((error)=>{
                 console.error(error);
             });
+
+           
           }
+
+
     if(i.leader == 'noleader'){
         const timer = async () => {
           try{
@@ -573,3 +615,36 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
     }
   });
     
+
+  var timer = '{"timer":"deadtime","id":"app","key":"1","value":"1","cnt":"1"}';
+  var deadtime = Date.now();
+  setTimeout(function () {
+      
+      console.log("dead");
+      console.log(Date.now() - deadtime);
+      var rejointime = Date.now();
+      client.send(timer, 9005, HOST, function(err, bytes) {
+          
+          console.log('deadtime send' + HOST +':'+ PORT);
+          console.log(timer);
+          
+      
+        
+        });
+      setTimeout(function () {
+          
+          console.log("rejoin");
+          console.log(Date.now() - rejointime);
+          
+          var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
+          client.send(timer2, 9005, HOST, function(err, bytes) {
+              
+              console.log('rejointime send' + HOST +':'+ PORT);
+              console.log(timer2);
+              
+          
+            
+            });
+  
+          }, 10000);
+      }, 10000);

@@ -1,0 +1,838 @@
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+favorite_rejoin end time is 752 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+deadtime is 6034, rejoin finish time is 705 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 47 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 58 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+deadtime is 6105, rejoin finish time is 844 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 38 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 8 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 9 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 10 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 9 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 36 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 6 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 9 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 36 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 40 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 10 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 38 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 41 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 10 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 38 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 38 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 45 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 42 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 36 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 42 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 56 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 36 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 46 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 36 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 41 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 40 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 40 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 5 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 14 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 38 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 10 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 42 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 9 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 17 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 9 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 36 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 15 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 13 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 57 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 31 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 43 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 40 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 44 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 56 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 47 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 12 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 18 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 329 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 46 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 27 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 313 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 616 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+deadtime is 553271, rejoin finish time is 8165 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 11 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 33 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 48 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 16 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 19 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 32 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 51 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 21 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 8 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 50 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 39 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 26 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 9 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 34 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 23 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 30 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 25 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 29 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 44 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 45 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 22 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 40 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 37 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 24 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 40 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 20 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 35 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
+response time is 28 Membership leader : orderer4, Members :orderer1 orderer2 orderer3 orderer5 
