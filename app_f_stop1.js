@@ -140,24 +140,46 @@ client.on('message',(msg,rinfo)=>{
         var end = Date.now()-i.start;
         var endtime = `response time is ${end}, `;
         var endtime2 = `${end}\n`;
-        endtime += `Membership leader : ${i.leader}, Members : `
-        if (i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
+        endtime += `Membership leader : ${i.leader}, favorite : `
+
+        if(i.fav1 == '1' || i.fav2 == '1' ){
+            endtime += 'orderer1 ';
+        }
+        
+        if(i.fav1 == '2' || i.fav2 == '2' ){
+            endtime += 'orderer2 ';
+        }
+
+        if(i.fav1 == '3' || i.fav2 == '3' ){
+            endtime += 'orderer3 ';
+        }
+
+        if(i.fav1 == '4' || i.fav2 == '4' ){
+            endtime += 'orderer4 ';
+        }
+
+        if(i.fav1 == '5' || i.fav2 == '5' ){
+            endtime += 'orderer5 ';
+        }
+        endtime += ' follower : '
+
+        if (i.orderer1 == 'follower' && i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
             endtime += 'orderer1 '
         }   
         
-        if (i.orderer2 != 'dead' && i.orderer2 != 'rejoin'){
+        if (i.orderer2 == 'follower' &&i.orderer2 != 'dead' && i.orderer2 != 'rejoin'){
             endtime += 'orderer2 '
         }   
      
-        if (i.orderer3 != 'dead' && i.orderer3 != 'rejoin'){
+        if (i.orderer3 == 'follower' &&i.orderer3 != 'dead' && i.orderer3 != 'rejoin'){
             endtime += 'orderer3 '
         }   
      
-        if (i.orderer4 != 'dead' && i.orderer4 != 'rejoin' && i.orderer4 != 'leader'){
+        if (i.orderer4 == 'follower' &&i.orderer4 != 'dead' && i.orderer4 != 'rejoin' && i.orderer4 != 'leader'){
             endtime += 'orderer4 '
         }   
      
-        if (i.orderer5 != 'dead' && i.orderer5 != 'rejoin'){
+        if (i.orderer5 == 'follower' &&i.orderer5 != 'dead' && i.orderer5 != 'rejoin'){
             endtime += 'orderer5 '
         }   
         endtime += '\n';
@@ -198,9 +220,9 @@ client.on('message',(msg,rinfo)=>{
      
             // }
         
-            fs.appendFile('./app_l_stop.txt',endtime)
+            fs.appendFile('./app_f_stop.txt',endtime)
             .then(()=>{
-              return fs.readFile('./app_l_stop.txt')
+              return fs.readFile('./app_f_stop.txt')
             
             })
             .then((data)=>{
@@ -210,9 +232,9 @@ client.on('message',(msg,rinfo)=>{
             .catch((error)=>{
               console.error(error);
             });
-            fs.appendFile('./app_l_stop1.txt',endtime2)
+            fs.appendFile('./app_f_stop1.txt',endtime2)
             .then(()=>{
-              return fs.readFile('./app_l_stop1.txt')
+              return fs.readFile('./app_f_stop1.txt')
             
             })
             .then((data)=>{

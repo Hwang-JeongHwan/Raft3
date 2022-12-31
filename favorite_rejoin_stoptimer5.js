@@ -37,7 +37,7 @@ var fav2 = 0;
 
 //var random1 = Random.getRandom(100,900);//랜덤 시간후 전송하기 위한 변수
 
-var random1 = 130;
+var random1 = 150;
 
 
 
@@ -95,7 +95,7 @@ client.bind({
             
             });
   
-          }, 100000);
+          }, 10000);
 
 
 

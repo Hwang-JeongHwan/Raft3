@@ -118,6 +118,7 @@ client.on('message',(msg,rinfo)=>{
                     //count+=1;
                     //console.log(count);
                 //var start = Date.now();
+
                 });
         
             //커밋됏다고 오면 다시보내고
@@ -136,32 +137,57 @@ client.on('message',(msg,rinfo)=>{
     timer();
     
     
+    
     if (i.commit == 'commit'){
         var end = Date.now()-i.start;
-        var endtime = `response time is ${end}, `;
+        var endtime = `index ${i.value} response time is ${end}, `;
         var endtime2 = `${end}\n`;
-        endtime += `Membership leader : ${i.leader}, Members : `
-        if (i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
+        endtime += `Membership leader : ${i.leader}, favorite : `
+
+        if((i.orderer1 == 'favorite1' || i.orderer1 == 'favorite') && i.rejoining != 'orderer1' ){
+            endtime += 'orderer1 ';
+        }
+        
+        if((i.orderer2 == 'favorite1' || i.orderer2 == 'favorite') && i.rejoining != 'orderer2' ){
+            endtime += 'orderer2 ';
+        }
+
+        if((i.orderer3 == 'favorite1' || i.orderer3 == 'favorite') && i.rejoining != 'orderer3' ){
+            endtime += 'orderer3 ';
+        }
+
+        if((i.orderer4 == 'favorite1' || i.orderer4 == 'favorite') && i.rejoining != 'orderer4' ){
+            endtime += 'orderer4 ';
+        }
+
+        if((i.orderer4 == 'favorite1' || i.orderer5 == 'favorite') && i.rejoining != 'orderer5' ){
+            endtime += 'orderer5 ';
+        }
+        endtime += ' follower : '
+
+        if ((i.orderer1 == 'follower' || i.rejoining == 'orderer1') && i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
             endtime += 'orderer1 '
         }   
         
-        if (i.orderer2 != 'dead' && i.orderer2 != 'rejoin'){
+        if ((i.orderer2 == 'follower' || i.rejoining == 'orderer2')&&i.orderer2 != 'dead' && i.orderer2 != 'rejoin'){
             endtime += 'orderer2 '
         }   
      
-        if (i.orderer3 != 'dead' && i.orderer3 != 'rejoin'){
+        if ((i.orderer3 == 'follower' || i.rejoining == 'orderer3')&&i.orderer3 != 'dead' && i.orderer3 != 'rejoin'){
             endtime += 'orderer3 '
         }   
      
-        if (i.orderer4 != 'dead' && i.orderer4 != 'rejoin' && i.orderer4 != 'leader'){
+        if ((i.orderer4 == 'follower' || i.rejoining == 'orderer4')&&i.orderer4 != 'dead' && i.orderer4 != 'rejoin' && i.orderer4 != 'leader'){
             endtime += 'orderer4 '
         }   
      
-        if (i.orderer5 != 'dead' && i.orderer5 != 'rejoin'){
+        if ((i.orderer5 == 'follower' || i.rejoining == 'orderer5')&&i.orderer5 != 'dead' && i.orderer5 != 'rejoin'){
             endtime += 'orderer5 '
         }   
         endtime += '\n';
         console.log('time:',end);
+
+        
         if (end<1000){
             total+=end;
             count +=1;
@@ -198,9 +224,9 @@ client.on('message',(msg,rinfo)=>{
      
             // }
         
-            fs.appendFile('./app_l_stop.txt',endtime)
+            fs.appendFile('./app_f.txt',endtime)
             .then(()=>{
-              return fs.readFile('./app_l_stop.txt')
+              return fs.readFile('./app_f.txt')
             
             })
             .then((data)=>{
@@ -210,9 +236,9 @@ client.on('message',(msg,rinfo)=>{
             .catch((error)=>{
               console.error(error);
             });
-            fs.appendFile('./app_l_stop1.txt',endtime2)
+            fs.appendFile('./app_f1.txt',endtime2)
             .then(()=>{
-              return fs.readFile('./app_l_stop1.txt')
+              return fs.readFile('./app_f1.txt')
             
             })
             .then((data)=>{
@@ -246,9 +272,7 @@ client.on('message',(msg,rinfo)=>{
         //커밋이 오면 다음 메시지를 다시보냄
 
     }
-   
-  
-  
+    
 
 });
 

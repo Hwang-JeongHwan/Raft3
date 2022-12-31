@@ -8,6 +8,7 @@ const fs = require('fs').promises;
 const fs1= require('fs');
 
 var deadtime = 0;
+
 fs.writeFile('./ledger5.txt','start\n');
 var before_id = 0; //이전 아이디값을 저장하기 위한 변수 
 //var array = 0;
@@ -37,7 +38,7 @@ var fav2 = 0;
 
 //var random1 = Random.getRandom(100,900);//랜덤 시간후 전송하기 위한 변수
 
-var random1 = 150;
+var random1 = 130;
 
 
 
@@ -51,7 +52,7 @@ var orderer5 = '{"id":"orderer5","state":"follower","term":1} '; //JSON형식으
 if (orderer5.state == 'leader'){
   random1 = 100
 } else{
-  random1 = 150
+  random1 = 130
 }
 var orderer_parse = JSON.parse(orderer5);
 
@@ -63,13 +64,11 @@ client.bind({
 
   
   const check=(value,state,array,rejoin,wait)=>{
-    if(value == 10 && state == 'follower'){
+    if(value == 10 && state == 'follower' ){
       console.log(value,'dead!!!!\n\n\n\n\n\n\n\n')
-      
       orderer_parse.state = 'dead'; // 오더러를 죽이고
-      deadtime = Date.now();
+      deadtime = Date.now()
       orderer_parse.term -=10;
-      
       if(array==0){
         dead_array = fs1.readFileSync('ledger5.txt').toString().split("\n");
         var l = dead_array.length;
@@ -80,7 +79,7 @@ client.bind({
         console.log('r_array\n\n\n\n\n\n\n',dead_array)
         js_array = JSON.parse(r_array);
         dead_array = 0;
-        
+
 
 
         setTimeout(function () {
@@ -192,10 +191,9 @@ client.on('message', (msg, rinfo) => {
         .then ((data)=>{ //동기로 사용하기 위해 ()함수 앞에 async를 붙ㅌ여주고
             console.log('ledger5:',data.toString());
             var copy_ok = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-            "copy":"ok","favorite1port":${i.favorite1port}}`;
-            client.send(copy_ok,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+            "copy":"ok","leaderport":${i.leaderport}}`;
+            client.send(copy_ok,i.leaderport,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
               console.log('send copy_ok',copy_ok);
-              //
             })
    
         })
@@ -209,10 +207,10 @@ client.on('message', (msg, rinfo) => {
   }
     if(js_array.logindex==i.logindex &&orderer_parse.state =='rejoin'){ //장부복사가 끝낫다고 보내야함 
       var copy_finish = `{"id":"${i.id}","key":"${i.key}","value":${i.value},"logindex":${i.logindex},"term":${orderer_parse.term},
-      "copy":"finish","favorite1port":${i.favorite1port},"finish":"finish", "deadtime":${deadtime}}`;
+      "copy":"finish","leaderport":${i.leaderport},"finish":"finish","deadtime":${deadtime}}`;
       var finish = JSON.parse(copy_finish);
       console.log('finish',finish);
-      client.send(copy_finish,i.favorite1port,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
+      client.send(copy_finish,PORT,HOST,()=>{ //카피를 했다고 ok메시지를 보내줌 
         dead_array = 0; //dead _array 를 0으로 만들어줌 => 이래야 다시 죽고나면 분기가 걸리니까 
         console.log('send copy_finish',copy_finish);
         orderer_parse.state ='follower';
@@ -595,4 +593,4 @@ if((i.candidate =='orderer1'||i.candidate =='orderer2'||i.candidate =='orderer3'
         
     }
   });
-
+    

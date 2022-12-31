@@ -30,7 +30,7 @@ client.bind({
 
 //var first = '{"first":"first"}'
 
-var json = '{"id":"app","key":"x","value":1,"cnt":0,"start":0}'//JSON형식으로 선언
+var json = '{"id":"app","key":"x","value":1,"cnt":0,"start":0,"append":"yes"}'//JSON형식으로 선언
 var app = JSON.parse(json); //string을 JSON으로 변환 key값에 따라 value를 바꾸기 위해 
 var retry = {"retry":"retry"};
 var first = '{"first":"first"}'
@@ -135,33 +135,56 @@ client.on('message',(msg,rinfo)=>{
     };
     timer();
     
-    
     if (i.commit == 'commit'){
         var end = Date.now()-i.start;
-        var endtime = `response time is ${end}, `;
+        var endtime = `index ${i.value} response time is ${end}, `;
         var endtime2 = `${end}\n`;
-        endtime += `Membership leader : ${i.leader}, Members : `
-        if (i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
+        endtime += `Membership leader : ${i.leader}, favorite : `
+
+        if(i.orderer1 == 'favorite1' || i.orderer1 == 'favorite' ){
+            endtime += 'orderer1 ';
+        }
+        
+        if(i.orderer2 == 'favorite1' || i.orderer2 == 'favorite' ){
+            endtime += 'orderer2 ';
+        }
+
+        if(i.orderer3 == 'favorite1' || i.orderer3 == 'favorite' ){
+            endtime += 'orderer3 ';
+        }
+
+        if(i.orderer4 == 'favorite1' || i.orderer4 == 'favorite' ){
+            endtime += 'orderer4 ';
+        }
+
+        if(i.orderer4 == 'favorite1' || i.orderer5 == 'favorite' ){
+            endtime += 'orderer5 ';
+        }
+        endtime += ' follower : '
+
+        if (i.orderer1 == 'follower' && i.orderer1 != 'dead' && i.orderer1 != 'rejoin'){
             endtime += 'orderer1 '
         }   
         
-        if (i.orderer2 != 'dead' && i.orderer2 != 'rejoin'){
+        if (i.orderer2 == 'follower' &&i.orderer2 != 'dead' && i.orderer2 != 'rejoin'){
             endtime += 'orderer2 '
         }   
      
-        if (i.orderer3 != 'dead' && i.orderer3 != 'rejoin'){
+        if (i.orderer3 == 'follower' &&i.orderer3 != 'dead' && i.orderer3 != 'rejoin'){
             endtime += 'orderer3 '
         }   
      
-        if (i.orderer4 != 'dead' && i.orderer4 != 'rejoin' && i.orderer4 != 'leader'){
+        if (i.orderer4 == 'follower' &&i.orderer4 != 'dead' && i.orderer4 != 'rejoin' && i.orderer4 != 'leader'){
             endtime += 'orderer4 '
         }   
      
-        if (i.orderer5 != 'dead' && i.orderer5 != 'rejoin'){
+        if (i.orderer5 == 'follower' &&i.orderer5 != 'dead' && i.orderer5 != 'rejoin'){
             endtime += 'orderer5 '
         }   
         endtime += '\n';
         console.log('time:',end);
+
+        
         if (end<1000){
             total+=end;
             count +=1;
