@@ -20,7 +20,7 @@ var orderer2 = 0;
 var orderer3 = 0;
 var orderer4 = 0;
 var orderer5 = 0;
-
+var rejoin_orderer = 0;
 /*
 server.on("message", function (msg, rinfo) {
   console.log("server got: " + msg + " from " +
@@ -107,6 +107,7 @@ server.on('message', (msg, rinfo) => {
     console.log('i.state',i.state);
     console.log('bf',bf);
     if(i.heartbit == 'heartbit'){
+      rejoining = i.rejoining;
       if(i.id == 'orderer1'){
         orderer1 = i.state;
 
@@ -276,7 +277,7 @@ server.on('message', (msg, rinfo) => {
       }
       console.log('commit_msg=',commit_msg);
       
-      var commit_finish = {"orderer1" : orderer1, "orderer2" : orderer2, "orderer3" : orderer3, "orderer4" : orderer4, "orderer5" : orderer5};
+      var commit_finish = {"orderer1" : orderer1, "orderer2" : orderer2, "orderer3" : orderer3, "orderer4" : orderer4, "orderer5" : orderer5, "rejoining":rejoin_orderer};
       
       var commit_merge = mergeJSON.merge(i, commit_finish);
 

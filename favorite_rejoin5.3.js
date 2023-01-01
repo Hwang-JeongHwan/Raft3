@@ -80,21 +80,7 @@ client.bind({
         console.log('r_array\n\n\n\n\n\n\n',dead_array)
         js_array = JSON.parse(r_array);
         dead_array = 0;
-        setTimeout(function () {
-                    
-          console.log("rejoin");
-
-          var timer2 = '{"timer":"rejointime","id":"app","key":"2","value":"2","cnt":"2"}';
-          client.send(timer2, 9005, HOST, function(err, bytes) {
-              
-              console.log('rejointime send' + HOST +':'+ PORT);
-              console.log(timer2);
-              
-          
-            
-            });
-  
-          }, 10000);
+        
       }
     } 
   }

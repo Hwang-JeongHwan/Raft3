@@ -732,7 +732,7 @@ response time is 13, Membership leader : orderer4, Members : orderer1 orderer2 o
 response time is 31, Membership leader : orderer4, Members : orderer1 orderer2 orderer3 
 response time is 26, Membership leader : orderer4, Members : orderer1 orderer2 orderer3 
 response time is 27, Membership leader : orderer4, Members : orderer1 orderer2 orderer3 
-deadtime is 555332, rejoin finish time is 10245 
+deadtime is 605332, rejoin finish time is 15245 
 response time is 11471, Membership leader : orderer4, Members : orderer1 orderer2 orderer3 orderer5 
 response time is 35, Membership leader : orderer4, Members : orderer1 orderer2 orderer3 orderer5 
 response time is 28, Membership leader : orderer4, Members : orderer1 orderer2 orderer3 orderer5 
